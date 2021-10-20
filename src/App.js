@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Index from "./views";
+import Router from "./router/router";
 
 class App extends Component {
   render(){
     return(
-      <Index />
+      <Router />
     )
   }
 }
