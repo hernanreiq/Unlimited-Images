@@ -12,13 +12,13 @@ class Router extends Component {
             <BrowserRouter>
                 <Header />
                 <Switch>
-                    <Route exact path="/:page?" render={(props) => {
+                    <Route exact path="/images/:page?" render={(props) => {
                         var currentPage = 1;
                         if (parseInt(props.match.params.page) > 0 || parseInt(props.match.params.page) < 267) {
                             currentPage = parseInt(props.match.params.page);
                         }
                         return (
-                            <Index page={currentPage} />
+                            <Index page={currentPage} contentPage={'images'} />
                         )
                     }} />
                     {/* <Route exact path="/home" render={() => {

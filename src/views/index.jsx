@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import CardImages from "./partials/card-image";
+import Pagination from "./partials/pagination";
 import { getImages } from "./helpers/pexels";
 
 class Index extends Component {
@@ -10,7 +12,7 @@ class Index extends Component {
             this.setState({
                 images: res
             });
-        })
+        });
     }
 
     componentDidMount() {
@@ -29,28 +31,16 @@ class Index extends Component {
                 <main>
                     <div className="container py-4">
                         <h1 className="text-center display-4">Unlimited Images</h1>
-                        <h4 className="text-center">Watch and enjoy the best royalty-free images</h4>
+                        <h4 className="text-center">Watch and enjoy the best royalty-free images and videos</h4>
                     </div>
                     <div className="container py-4">
                         <div className="row">
                             {this.state.images &&
-                                this.state.images.photos.map((image, i) => {
-                                    return (
-                                        <div className="col-md-4 my-2" key={i}>
-                                            <div className="card shadow">
-                                                <div className="card-body p-0">
-                                                    <img src={image.src.tiny} alt="mario" className="card-img" />
-                                                </div>
-                                                <div className="card-footer">
-                                                    <a href={image.photographer_url} target="_blank" rel="noreferrer">{image.photographer}</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })
+                                <CardImages images={this.state.images} />
                             }
                         </div>
                     </div>
+                    <Pagination content={this.props.contentPage} page={this.props.page} />
                 </main>
             </React.Fragment>
         )
