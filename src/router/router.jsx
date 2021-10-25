@@ -12,6 +12,9 @@ class Router extends Component {
             <BrowserRouter>
                 <Header />
                 <Switch>
+                    <Route exact path="/Unlimited-Images/" component={Index} />
+                    <Route exact path="/" component={Index} />
+                    <Route exact path="/home" component={Index} />
                     <Route exact path="/images/:page?" render={(props) => {
                         var currentPage = 1;
                         if (parseInt(props.match.params.page) > 0 || parseInt(props.match.params.page) < 267) {
@@ -21,18 +24,6 @@ class Router extends Component {
                             <Index page={currentPage} contentPage={'images'} />
                         )
                     }} />
-                    {/* <Route exact path="/home" render={() => {
-                        var currentPage = 1;
-                        return (
-                            <Index />
-                        )
-                    }} />
-                    <Route exact path="/Unlimited-Images" render={() => {
-                        var currentPage = 1;
-                        return (
-                            <Index />
-                        )
-                    }} /> */}
                 </Switch>
             </BrowserRouter>
         )

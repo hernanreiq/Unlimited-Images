@@ -13,6 +13,7 @@ class Header extends Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto">
                                 <NavLink to="/home" activeClassName="active" className="text-white mx-3 text-decoration-none">Home</NavLink>
+                                <NavLink to="/images" activeClassName="active" className="text-white mx-3 text-decoration-none">Images</NavLink>
                                 <NavLink to="/videos" activeClassName="active" className="text-white mx-3 text-decoration-none">Videos</NavLink>
                             </Nav>
                         </Navbar.Collapse>
