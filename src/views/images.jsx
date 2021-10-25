@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import PopUp from "./partials/popup";
 import CardImages from "./partials/card-image";
 import Pagination from "./partials/pagination";
 import { getImages } from "./helpers/pexels";
+import PopUpImage from "./partials/popup/popup-image";
 
 class Images extends Component {
     state = {
@@ -56,7 +56,7 @@ class Images extends Component {
                     </div>
                     <Pagination content={this.props.contentPage} page={this.props.page} />
                     {this.state.show &&
-                        <PopUp image={this.state.imageClicked} showModal={this.state.show} closeModal={this.closeModal} />
+                        <PopUpImage image={this.state.imageClicked} showModal={this.state.show} closeModal={this.closeModal} />
                     }
                 </main>
             </React.Fragment>
