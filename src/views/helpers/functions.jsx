@@ -5,17 +5,17 @@ export const changePage = (numPage, content, direction) => {
     var btn = '';
 
     if (direction === 'next'){
-        if (numPage > 0 && numPage < 267) {
+        if (numPage > 0 && numPage < 100) {
             page = numPage + 1;
         } else {
             page = 1;
         }
         btn = 'btn-success';
     } else if (direction === 'back') {
-        if (numPage > 1 && numPage <= 267) {
+        if (numPage > 1 && numPage <= 100) {
             page = numPage - 1;
         } else if (numPage === 1){
-            page = 267;
+            page = 100;
         }
         btn = 'btn-danger';
     }

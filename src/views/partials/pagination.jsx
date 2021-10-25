@@ -5,7 +5,7 @@ class Pagination extends Component {
     render() {
         return (
             <React.Fragment>
-                {this.props.content === 'images' &&
+                {this.props.content === 'images' || this.props.content === 'videos' ?
                     <div className="container py-4">
                         <div className="row">
                             <div className="col-md-4 offset-md-4 text-center">
@@ -16,7 +16,7 @@ class Pagination extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> : ''
                 }
             </React.Fragment>
         )

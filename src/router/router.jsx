@@ -3,11 +3,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Index from "../views/index";
 import Images from "../views/images";
 import Header from "../views/partials/header";
+import Videos from "../views/videos";
 
 class Router extends Component {
-    state = {
-        content: ''
-    }
     render() {
         return (
             <BrowserRouter>
@@ -23,6 +21,15 @@ class Router extends Component {
                         }
                         return (
                             <Images page={currentPage} contentPage={'images'} />
+                        )
+                    }} />
+                    <Route exact path="/videos/:page?" render={(props) => {
+                        var currentPage = 1;
+                        if (parseInt(props.match.params.page) > 0 || parseInt(props.match.params.page) < 100) {
+                            currentPage = parseInt(props.match.params.page);
+                        }
+                        return (
+                            <Videos page={currentPage} contentPage={'videos'} />
                         )
                     }} />
                 </Switch>
