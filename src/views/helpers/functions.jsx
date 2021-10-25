@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export const changePage = (numPage, content, direction) => {
     var page = '';
@@ -21,6 +22,6 @@ export const changePage = (numPage, content, direction) => {
     }
 
     return (
-        <a href={`/${content}/${page}`} className={'btn ' + btn}><b>{direction.toUpperCase()}</b></a>
+        <NavLink to={`/Unlimited-Images/${content}/${page}`}  className={'btn ' + btn}><b>{direction.toUpperCase()}</b></NavLink>
     )
 }
