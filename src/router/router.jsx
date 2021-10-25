@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Index from "../views";
+import Index from "../views/index";
+import Images from "../views/images";
 import Header from "../views/partials/header";
 
 class Router extends Component {
@@ -21,7 +22,7 @@ class Router extends Component {
                             currentPage = parseInt(props.match.params.page);
                         }
                         return (
-                            <Index page={currentPage} contentPage={'images'} />
+                            <Images page={currentPage} contentPage={'images'} />
                         )
                     }} />
                 </Switch>

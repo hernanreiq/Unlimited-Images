@@ -5,7 +5,7 @@ const client = createClient(API_KEY);
 
 export const getImages = async (numPage) => {
     var result = {};
-    await client.photos.curated({ per_page: 3, page: numPage }).then(photos => {
+    await client.photos.curated({ per_page: 30, page: numPage }).then(photos => {
         result = photos;
     });
     console.log(result);

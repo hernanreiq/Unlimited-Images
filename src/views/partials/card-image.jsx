@@ -11,8 +11,8 @@ class CardImages extends Component {
                                 <div className="card-body p-0">
                                     <img src={image.src.tiny} alt="mario" className="card-img" />
                                 </div>
-                                <div className="card-footer">
-                                    <a href={image.photographer_url} target="_blank" rel="noreferrer">{image.photographer}</a>
+                                <div className="card-footer bg-dark">
+                                    <a href={image.photographer_url} target="_blank" rel="noreferrer" className="text-warning">{image.photographer}</a>
                                 </div>
                             </div>
                         </div>
