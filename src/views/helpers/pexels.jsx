@@ -14,9 +14,8 @@ export const getImages = async (numPage) => {
 
 export const getVideos = async (numPage) => {
     var result = {};
-    await client.videos.popular({ per_page: 3, page: numPage }).then(media => {
+    await client.videos.popular({ per_page: 30, page: numPage }).then(media => {
         result = media.videos;
     });
-    console.log(result);
     return result;
 }
