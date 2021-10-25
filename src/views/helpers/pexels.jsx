@@ -8,7 +8,6 @@ export const getImages = async (numPage) => {
     await client.photos.curated({ per_page: 30, page: numPage }).then(photos => {
         result = photos;
     });
-    console.log(result);
     return result;
 }
 

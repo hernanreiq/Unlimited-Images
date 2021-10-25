@@ -9,7 +9,7 @@ class CardImages extends Component {
                         <div className="col-md-4 my-2" key={i}>
                             <div className="card shadow">
                                 <div className="card-body p-0">
-                                    <img src={image.src.tiny} alt="mario" className="card-img" />
+                                    <img src={image.src.tiny} alt="content by pexels" className="card-img" onClick={() => {this.props.showModal(image)}} />
                                 </div>
                                 <div className="card-footer bg-dark">
                                     <a href={image.photographer_url} target="_blank" rel="noreferrer" className="text-warning">{image.photographer}</a>
