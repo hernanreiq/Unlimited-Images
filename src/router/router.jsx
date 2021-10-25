@@ -4,6 +4,7 @@ import Index from "../views/index";
 import Images from "../views/images";
 import Header from "../views/partials/header";
 import Videos from "../views/videos";
+import About from "../views/about";
 
 class Router extends Component {
     render() {
@@ -12,9 +13,7 @@ class Router extends Component {
                 <Header />
                 <Switch>
                     <Route exact path="/Unlimited-Images/" component={Index} />
-                    <Route exact path="/" component={Index} />
-                    <Route exact path="/home" component={Index} />
-                    <Route exact path="/images/:page?" render={(props) => {
+                    <Route exact path="/Unlimited-Images/images/:page?" render={(props) => {
                         var currentPage = 1;
                         if (parseInt(props.match.params.page) > 0 || parseInt(props.match.params.page) < 267) {
                             currentPage = parseInt(props.match.params.page);
@@ -23,7 +22,7 @@ class Router extends Component {
                             <Images page={currentPage} contentPage={'images'} />
                         )
                     }} />
-                    <Route exact path="/videos/:page?" render={(props) => {
+                    <Route exact path="/Unlimited-Images/videos/:page?" render={(props) => {
                         var currentPage = 1;
                         if (parseInt(props.match.params.page) > 0 || parseInt(props.match.params.page) < 100) {
                             currentPage = parseInt(props.match.params.page);
@@ -32,6 +31,8 @@ class Router extends Component {
                             <Videos page={currentPage} contentPage={'videos'} />
                         )
                     }} />
+                    <Route path="/Unlimited-Images/about" component={About} />
+                    <Route path="/Unlimited-Images/*" component={Index} />
                 </Switch>
             </BrowserRouter>
         )

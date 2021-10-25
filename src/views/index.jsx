@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class Index extends Component {
     render() {
@@ -10,8 +11,8 @@ class Index extends Component {
                             <h1 className="text-center display-4">Unlimited Images</h1>
                             <h4 className="text-center">Watch and enjoy the best royalty-free images and videos</h4>
                             <div className="text-center mt-4">
-                                <a href="/images" className="btn btn-success shadow m-2" >Images</a>
-                                <a href="/videos" className="btn btn-success shadow m-2" >Videos</a>
+                                <NavLink to="/Unlimited-Images/images/1" className="btn btn-success shadow m-2">Images</NavLink>
+                                <NavLink to="/Unlimited-Images/videos/1" className="btn btn-success shadow m-2">Videos</NavLink>
                             </div>
                         </div>
                     </div>
