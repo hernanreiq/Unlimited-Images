@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar bg="success" expand="lg" variant="dark" className="shadow">
+                <Navbar bg="success" expand="lg" variant="dark" className="shadow" id="navbar">
                     <Container>
                         <Navbar.Brand><NavLink to="/Unlimited-Images" className="border-none py-3 text-white font-weight-bold text-decoration-none" >Unlimited Images</NavLink></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />

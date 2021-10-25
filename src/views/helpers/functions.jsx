@@ -22,6 +22,6 @@ export const changePage = (numPage, content, direction) => {
     }
 
     return (
-        <NavLink to={`/Unlimited-Images/${content}/${page}`}  className={'btn ' + btn}><b>{direction.toUpperCase()}</b></NavLink>
+        <NavLink to={`/Unlimited-Images/${content}/${page}`}  className={'btn ' + btn} onClick={() => {document.getElementById('navbar').scrollIntoView()}}><b>{direction.toUpperCase()}</b></NavLink>
     )
 }
